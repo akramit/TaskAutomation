@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/menu">
+
+    <fragment
+        android:id="@+id/textFragment"
+        android:name="com.androidautosolns.taskautomation.TextFragment"
+        android:label="fragment_text"
+        tools:layout="@layout/fragment_text" >
+        <action
+            android:id="@+id/action_textFragment_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.androidautosolns.taskautomation.Menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_textFragment"
+            app:destination="@id/textFragment" />
+        <action
+            android:id="@+id/action_menu_to_call"
+            app:destination="@id/call" />
+    </fragment>
+    <fragment
+        android:id="@+id/call"
+        android:name="com.androidautosolns.taskautomation.Call"
+        android:label="fragment_call"
+        tools:layout="@layout/fragment_call" >
+        <action
+            android:id="@+id/action_call_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+</navigation>

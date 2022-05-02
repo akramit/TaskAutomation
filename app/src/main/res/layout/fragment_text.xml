@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <EditText
+        android:id="@+id/message_id"
+        android:layout_width="252dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="Enter your Message"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/textFragment"
+        app:layout_constraintTop_toTopOf="@+id/textFragment"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="textOkClick"
+        android:text="@android:string/ok"
+        app:layout_constraintBottom_toBottomOf="@+id/textFragment"
+        app:layout_constraintEnd_toEndOf="@+id/message_id"
+        app:layout_constraintStart_toStartOf="@+id/message_id"
+        app:layout_constraintTop_toBottomOf="@+id/message_id"
+        app:layout_constraintVertical_bias="0.689" />
+
+    <Button
+        android:id="@+id/text_backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="backToMenu"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/schedule"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/schedule"
+        app:layout_constraintTop_toBottomOf="@+id/schedule"
+        app:layout_constraintVertical_bias="0.632" />
+
+    <EditText
+        android:id="@+id/phone_id"
+        android:layout_width="248dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="PhoneNumber"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/schedule"
+        app:layout_constraintEnd_toEndOf="@+id/message_id"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toStartOf="@+id/message_id"
+        app:layout_constraintTop_toBottomOf="@+id/message_id"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <EditText
+        android:id="@+id/time_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Enter Time"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/schedule"
+        app:layout_constraintEnd_toEndOf="@+id/phone_id"
+        app:layout_constraintStart_toStartOf="@+id/phone_id"
+        app:layout_constraintTop_toBottomOf="@+id/phone_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
